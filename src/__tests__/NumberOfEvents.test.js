@@ -23,6 +23,6 @@ describe("<NumberOfEvents/> component", () => {
       query: 32,
     });
     NumberOfEventsWrapper.find(".number").simulate("change");
-    expect(NumberOfEventsWrapper.state("query")).toBe(1);
+    expect(NumberOfEventsWrapper.state("query")).toBe(32);
   });
 });
