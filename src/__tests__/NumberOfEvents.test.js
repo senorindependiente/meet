@@ -18,7 +18,7 @@ describe("<NumberOfEvents/> component", () => {
     expect(NumberOfEventsWrapper.find(".number").prop("value")).toBe(query);
   });
 
-  test("change state when text input changes", () => {
+  test("change state when number input changes", () => {
     NumberOfEventsWrapper.setState({
       query: 32,
     });
