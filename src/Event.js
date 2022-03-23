@@ -17,12 +17,12 @@ class Event extends Component {
 
     return (
       <div className="event">
-        <h1 className="summary">{event.summary}</h1>
+        <h3 className="summary">{event.summary}</h3>
 
         <p className="start-date">
           {event.start.dateTime} ({event.start.timeZone})
         </p>
-        <p className="location">{event.location}</p>
+        <p className="location">@{event.summary} | {event.location}</p>
         <button onClick={this.handleClick} className="show-details hide-details">
           {collapsed ? "Show Details" : "Hide Details"}
         </button>
