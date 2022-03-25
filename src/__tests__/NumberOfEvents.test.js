@@ -26,3 +26,10 @@ describe("<NumberOfEvents/> component", () => {
     expect(NumberOfEventsWrapper.state("query")).toBe("");
   });
 });
+
+//integration testing
+describe("<NumberOfEvents/> integration", () => {
+
+  
+})
+
