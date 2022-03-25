@@ -29,8 +29,8 @@ class App extends Component {
           : events.filter((event) => event.location === location);
           if (this.mounted) {
           this.setState({
-            events: locationEvents.slice(0, this.state.numberOfEvents),
-            currentLocation: location,
+            events: locationEvents,
+          numberOfEvents: eventNumber
       });
     }
     });
