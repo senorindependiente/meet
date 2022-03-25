@@ -15,21 +15,14 @@ describe("<NumberOfEvents/> component", () => {
 
   test("renders text input correctly", () => {
     const query = NumberOfEventsWrapper.state("query");
-    expect(NumberOfEventsWrapper.find(".number").prop("value")).toBe(query);
+    expect(NumberOfEventsWrapper.find(".numberinput").prop("value")).toBe(query);
   });
 
-  test("change state when number input changes", () => {
-    NumberOfEventsWrapper.setState({
-      query: "",
-    });
-    NumberOfEventsWrapper.find(".number").simulate("change");
-    expect(NumberOfEventsWrapper.state("query")).toBe("");
-  });
+  test("change number of events when input changes", () => {
+    NumberOfEventsWrapper.setState({ numberOfEvents: 32 });
+    expect(NumberOfEventsWrapper.state("numberOfEvents")).toEqual(32);
+});
 });
 
-//integration testing
-describe("<NumberOfEvents/> integration", () => {
 
-  
-})
 
