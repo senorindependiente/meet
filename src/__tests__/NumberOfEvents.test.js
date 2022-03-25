@@ -20,9 +20,9 @@ describe("<NumberOfEvents/> component", () => {
 
   test("change state when number input changes", () => {
     NumberOfEventsWrapper.setState({
-      query: 32,
+      query: "",
     });
     NumberOfEventsWrapper.find(".number").simulate("change");
-    expect(NumberOfEventsWrapper.state("query")).toBe(32);
+    expect(NumberOfEventsWrapper.state("query")).toBe("");
   });
 });
