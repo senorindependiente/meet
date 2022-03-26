@@ -1,17 +1,19 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&family=Volkhov:wght@400;700&display=swap);
+
 .App {
   text-align: center;
   padding: 2% 5%;
 }
 
-*{
-  background-color: #f7c891;
-  color:#020101;
+* {
+  background-color: #aecfe4;
+  color: #020101;
+  font-family: "Volkhov";
 }
 
 .App * {
   box-sizing: border-box;
-  background-color: #f7c891;
+  background-color: #aecfe4;
 }
 
 ul {
@@ -33,19 +35,17 @@ p {
 input[type="text"],
 input[type="number"] {
   padding: 8px 6px 8px 10px;
-  border-radius: 4px;
+  border-radius: 10px;
   outline: none;
-  border: 1px solid #020101;;
+  border: 3px solid #d7622f;
   font-size: 14px;
   line-height: 20px;
   align-self: center;
   height: 38px;
-  
 }
 
 .city {
   width: 250px;
-  background-color: #f2efee;
 }
 
 .CitySearch {
@@ -55,7 +55,21 @@ input[type="number"] {
   max-width: 300px;
   margin: auto;
   position: relative;
-  
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: "Montserrat";
+  font-size: 2.5rem;
+}
+
+.searchcity {
+  font-weight: 600;
+  font-family: "Montserrat";
+}
+
+.numbercount {
+  font-family: "Montserrat";
 }
 
 .suggestions {
@@ -64,6 +78,7 @@ input[type="number"] {
   z-index: 2;
   align-self: center;
   margin: 0;
+  margin-top: 8rem;
   top: 43px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
@@ -72,9 +87,13 @@ input[type="number"] {
 .suggestions > li {
   text-align: left;
   padding: 8px 6px 8px 10px;
-  background-color: #eee;
+  
   cursor: default;
+  transition: 0.5s;
+  border:1px solid #d7622f;
+
 }
+
 
 .suggestions > li:last-child {
   border-bottom-left-radius: 4px;
@@ -82,20 +101,63 @@ input[type="number"] {
 }
 
 .suggestions > li:hover {
-  background-color: #bcdcdb;
+  background-color: #d7622f;
+}
+
+.suggestions b:hover {
+  background-color: #d7622f;
 }
 
 .event {
-  padding: 10px 10px 35px;
-  margin-bottom: 10px;
+  padding: 2rem;
+  margin:2rem 0rem;
   text-align: left;
-  border: 1px solid #020101;
   border-radius: 4px;
   position: relative;
-  
+  background-color: #020101;
+  color: #aecfe4;
+  box-shadow: 0 25.6px 57.6px 0 rgb(0 0 0 / 22%), 0 4.8px 14.4px 0 rgb(0 0 0 / 18%);
 }
 
- .show-details {
+.collapsed,
+.summary,
+.location,
+.start-date,
+.extra-details {
+  background-color: #020101;
+  color: #aecfe4;
+}
+
+
+
+.extra-details a {
+  background-color: #020101;
+  color: #d7622f;
+  transition: 0.5s;
+}
+
+.extra-details a:hover {
+  opacity: 0.8;
+}
+
+.extra-details h3 {
+  background-color: #020101;
+  color: #aecfe4;
+}
+.extra-details,
+.event-description {
+  background-color: #020101;
+  color: #aecfe4;
+  margin-bottom: 2rem;
+}
+
+.event-description{
+  margin-top:1rem;
+  width: 85%;
+}
+
+
+.show-details {
   position: absolute;
   right: 5px;
   bottom: 5px;
@@ -103,26 +165,23 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
-  background: #f2efee;
-  color: #fff;
+  background: #d7622f;
+  color: #020101;
   border: 0;
   font-size: 0.8rem;
-  font-weight:400;
+  font-weight: 600;
   text-transform: uppercase;
-  font-family: roboto;
-  background-image: linear-gradient(180deg,#020101,#693a1a);
-box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
-transition: all .2s ease-out;
-border-radius: 50px;
+  font-family: "Montserrat";
+  box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%),
+    0 1px 3px 0 rgb(93 100 148 / 20%);
+  transition: all 0.2s ease-out;
+  border-radius: 10px;
+  transition: 0.5s;
 }
 
-
-
-button:hover{
-    box-shadow: 0 8px 22px 0 rgb(37 44 97 / 15%), 0 4px 6px 0 rgb(93 100 148 / 20%);
+button:hover {
+  opacity: 0.8;
 }
-
-
 
 .name {
   font-size: 18px;
@@ -144,15 +203,14 @@ button:hover{
 }
 
 .numberinput,
-.numberOfEvents{
+.numberOfEvents {
   display: flex;
   flex-direction: column;
   flex-basis: 300px;
   max-width: 300px;
   margin: auto;
   position: relative;
-  background-color: #f2efee;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 .button-wrapper {
@@ -233,15 +291,10 @@ button:hover{
   font-family: "Roboto";
 }
 
-.event-desciption{
-  font-family: sans-serif;
-}
-.summary{
+.summary {
   font-size: 1.5rem;
   font-weight: 800;
 }
-
-
 
 @media only screen and (min-width: 992px) {
   .data-vis-wrapper {

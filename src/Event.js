@@ -17,6 +17,7 @@ class Event extends Component {
 
     return (
       <div className="event">
+        <div className="collapsed">
         <h3 className="summary">{event.summary}</h3>
 
         <p className="start-date">
@@ -26,6 +27,7 @@ class Event extends Component {
         <button onClick={this.handleClick} className="show-details hide-details">
           {collapsed ? "Show Details" : "Hide Details"}
         </button>
+</div>
 
         {!collapsed && (
           <div className="extra-details">
