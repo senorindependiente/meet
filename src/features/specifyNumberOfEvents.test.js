@@ -44,7 +44,7 @@ defineFeature(feature, (test) => {
 
     when("User changes number", () => {
 
-        const query = NumberOfEventsWrapper.state("query");
+        const query = NumberOfEventsWrapper.state("numberOfEvents");
         expect(NumberOfEventsWrapper.find(".numberinput").prop("value")).toBe(query);
     });
 
