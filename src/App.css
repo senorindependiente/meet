@@ -3,6 +3,7 @@
 .App {
   text-align: center;
   padding: 2% 5%;
+  
 }
 
 * {
@@ -87,13 +88,11 @@ input[type="number"] {
 .suggestions > li {
   text-align: left;
   padding: 8px 6px 8px 10px;
-  
+
   cursor: default;
   transition: 0.5s;
-  border:1px solid #d7622f;
-
+  border: 1px solid #d7622f;
 }
-
 
 .suggestions > li:last-child {
   border-bottom-left-radius: 4px;
@@ -110,14 +109,17 @@ input[type="number"] {
 
 .event {
   padding: 2rem;
-  margin:2rem 0rem;
+  margin: 2rem 5rem;
   text-align: left;
   border-radius: 4px;
   position: relative;
   background-color: #020101;
   color: #aecfe4;
-  box-shadow: 0 25.6px 57.6px 0 rgb(0 0 0 / 22%), 0 4.8px 14.4px 0 rgb(0 0 0 / 18%);
+  box-shadow: 0 25.6px 57.6px 0 rgb(0 0 0 / 22%),
+    0 4.8px 14.4px 0 rgb(0 0 0 / 18%);
 }
+
+
 
 .collapsed,
 .summary,
@@ -126,9 +128,8 @@ input[type="number"] {
 .extra-details {
   background-color: #020101;
   color: #aecfe4;
+  margin-bottom: 2rem;
 }
-
-
 
 .extra-details a {
   background-color: #020101;
@@ -151,11 +152,10 @@ input[type="number"] {
   margin-bottom: 2rem;
 }
 
-.event-description{
-  margin-top:1rem;
+.event-description {
+  margin-top: 1rem;
   width: 85%;
 }
-
 
 .show-details {
   position: absolute;
@@ -178,6 +178,11 @@ input[type="number"] {
   transition: 0.5s;
 }
 
+@media screen and (max-width: 600px) {
+  .show-details {
+    margin-right: 7rem;
+  }
+}
 button:hover {
   opacity: 0.8;
 }
