@@ -179,8 +179,9 @@ input[type="number"] {
 }
 
 @media screen and (max-width: 400px) {
-  .show-details {
-    margin-right: 1rem;
+ 
+  .event{
+    margin: 2rem 3rem;
   }
 }
 button:hover {
