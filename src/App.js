@@ -5,6 +5,7 @@ import CitySearch from "./CitySearch";
 import NumberOfEvents from "./NumberOfEvents";
 import { getEvents, extractLocations } from "./api";
 import "./nprogress.css";
+import { StatusAlert } from "./Alert";
 class App extends Component {
   state = {
     events: [],
@@ -45,6 +46,12 @@ class App extends Component {
           currentLocation: location,
           numberOfEvents: eventCount,
         });
+
+        if (navigator.onLine) {
+          this.setState({
+            infoText: "Online",
+          });
+        }
       }
     });
   };
@@ -52,6 +59,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <StatusAlert text={this.state.infoText} />
         <CitySearch
           locations={this.state.locations}
           updateEvents={this.updateEvents}

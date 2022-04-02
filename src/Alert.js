@@ -38,3 +38,15 @@ class ErrorAlert extends Alert {
 }
 
 export { ErrorAlert };
+
+
+class StatusAlert extends Alert {
+  constructor(props) {
+    super(props);
+    this.color = "white";
+  }
+}
+
+export { StatusAlert };
+
+
