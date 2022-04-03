@@ -1,14 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&family=Volkhov:wght@400;700&display=swap);
 
-.App {
-  text-align: center;
-  padding: 2% 5%;
-  background-image: url("duotone.png");
-  background-size: cover;
-  background-position: center;
-  
-}
-
 * {
   background-color: white;
   color: #020101;
