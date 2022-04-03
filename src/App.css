@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&family=Volkhov:wght@400;700&display=swap);
 
+.App {
+  text-align: center;
+  padding: 2% 5%;
+}
+
 * {
   background-color: white;
   color: #020101;
@@ -10,7 +15,6 @@
   box-sizing: border-box;
   background-color: white;
 }
-
 
 
 ul {
