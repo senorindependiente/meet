@@ -3,6 +3,10 @@
 .App {
   text-align: center;
   padding: 2% 5%;
+  background-image: url("duotone.png");
+  background-size: cover;
+  background-position: center;
+  
 }
 
 * {
@@ -15,6 +19,8 @@
   box-sizing: border-box;
   background-color: white;
 }
+
+
 
 ul {
   padding: 0;
