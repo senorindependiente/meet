@@ -37,7 +37,7 @@ input[type="number"] {
   padding: 8px 6px 8px 10px;
   border-radius: 10px;
   outline: none;
-  border: 3px solid #eab711;
+  border: 5px solid #eab711;
   font-size: 14px;
   line-height: 20px;
   align-self: center;
@@ -73,6 +73,7 @@ input[type="number"] {
 }
 
 .suggestions {
+  border: 5px solid #eab711;
   width: 250px;
   position: absolute;
   z-index: 2;
