@@ -18,7 +18,7 @@ class App extends Component {
 
   async componentDidMount() { 
     this.mounted = true;
-    if (navigator.onLine && !window.location.href.startsWith('http://localhost')) {
+   
    
     const accessToken = localStorage.getItem("access_token");
     const isTokenValid = (await checkToken(accessToken)).error ? false : true;
@@ -34,7 +34,7 @@ class App extends Component {
       });
     }
   }
-}
+
 
   componentWillUnmount() {
     this.mounted = false;
