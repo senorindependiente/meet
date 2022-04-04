@@ -37,26 +37,42 @@ class App extends Component {
   };
 
   async componentDidMount() {
+    // load events when app loads, make API call and save initial data to state
+    // only update state if this.mounted is true to prevent that component unmounts before API call finished
     this.mounted = true;
-    // if (
-    //   navigator.onLine &&
-    //   !window.location.href.startsWith("http://localhost")
-    // ) {
-      const accessToken = localStorage.getItem("access_token");
+
+    if (navigator.onLine && !window.location.href.startsWith('http://localhost')) {
+      const accessToken = localStorage.getItem('access_token');
       const isTokenValid = (await checkToken(accessToken)).error ? false : true;
       const searchParams = new URLSearchParams(window.location.search);
+      const code = searchParams.get('code');
 
-      const code = searchParams.get("code");
+      this.setState({
+        showWelcomeScreen: !(code || isTokenValid)
+      });
 
-      this.setState({ showWelcomeScreen: !(code || isTokenValid) });
       if ((code || isTokenValid) && this.mounted) {
         getEvents().then((events) => {
           if (this.mounted) {
-            this.setState({ events, locations: extractLocations(events) });
+            this.setState({
+              events,
+              locations: extractLocations(events),
+              infoText: ''
+            });
           }
         });
       }
-    
+    } else {
+      getEvents().then((events) => {
+        if (this.mounted) {
+          this.setState({
+            events,
+            locations: extractLocations(events),
+            infoText: 'You are offline. New events can not be loaded.'
+          });
+        }
+      });
+    }
   }
 
   componentWillUnmount() {
