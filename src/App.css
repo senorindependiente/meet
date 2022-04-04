@@ -3,6 +3,7 @@
 .App {
   text-align: center;
   padding: 2% 5%;
+  
 }
 
 * {
@@ -15,7 +16,6 @@
   box-sizing: border-box;
   background-color: white;
 }
-
 
 ul {
   padding: 0;
@@ -39,6 +39,7 @@ input[type="number"] {
   border-radius: 10px;
   outline: none;
   border: 3px solid #eab711;
+  ;
   font-size: 14px;
   line-height: 20px;
   align-self: center;
@@ -119,6 +120,8 @@ input[type="number"] {
     0 4.8px 14.4px 0 rgb(0 0 0 / 18%);
 }
 
+
+
 .collapsed,
 .summary,
 .location,
@@ -163,7 +166,7 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
-  background: #ddb858;
+  background: #DDB858;
   color: #553c7d;
   border: 0;
   font-size: 0.8rem;
@@ -177,7 +180,8 @@ input[type="number"] {
 }
 
 @media screen and (max-width: 400px) {
-  .event {
+ 
+  .event{
     margin: 2rem 3rem;
   }
 }
@@ -245,7 +249,7 @@ button:hover {
   color: #494949;
   text-transform: uppercase;
   text-decoration: none;
-
+  
   padding: 20px;
   border: 4px solid #494949;
   display: inline-block;
@@ -275,6 +279,7 @@ button:hover {
   width: 40px;
   height: 40px;
   border-radius: 2px;
+  
 }
 .google-icon {
   position: absolute;
@@ -284,17 +289,20 @@ button:hover {
   height: 22px;
 }
 .btn-text {
-  outline: none;
-  border: none;
+  outline:none;
+  border:none;
   float: right;
-  padding-top: 0.4rem;
-  padding-right: 1.2rem;
-  color: white;
+padding-top:0.4rem;
+padding-right: 1.2rem;
+color:white;
   font-size: 14px;
   letter-spacing: 0.2px;
   font-family: "Roboto";
   background-color: #4285f4;
+
 }
+
+ 
 
 .summary {
   font-size: 1.5rem;
