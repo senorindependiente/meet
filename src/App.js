@@ -37,6 +37,7 @@ class App extends Component {
   };
 
   async componentDidMount() {
+    this.mounted = true;
     if (
       navigator.onLine &&
       !window.location.href.startsWith("http://localhost")
@@ -81,7 +82,7 @@ class App extends Component {
           events: locationEvents.slice(0, this.state.numberOfEvents),
           currentLocation: location,
           numberOfEvents: eventCount,
-          infoText: "You are offline.",
+          infoText: "You are offline."
         });
       }
     });
