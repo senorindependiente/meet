@@ -37,7 +37,10 @@ class App extends Component {
   };
 
   async componentDidMount() {
-    if (navigator.onLine && !window.location.href.startsWith('http://localhost')) {
+    if (
+      navigator.onLine &&
+      !window.location.href.startsWith("http://localhost")
+    ) {
       const accessToken = localStorage.getItem("access_token");
       const isTokenValid = (await checkToken(accessToken)).error ? false : true;
       const searchParams = new URLSearchParams(window.location.search);
@@ -78,24 +81,21 @@ class App extends Component {
           events: locationEvents.slice(0, this.state.numberOfEvents),
           currentLocation: location,
           numberOfEvents: eventCount,
-          infoText: "You are offline."
+          infoText: "You are offline.",
         });
       }
     });
   };
 
-
   render() {
-    if (this.state.showWelcomeScreen === undefined && navigator.onLine) {
+    if (this.state.showWelcomeScreen === undefined) {
       return <div className="App" />;
     }
     if (this.state.showWelcomeScreen === true)
-
       return (
         <div className="App">
-        
-            <StatusAlert text={this.state.infoText} />
-          
+          <StatusAlert text={this.state.infoText} />
+
           <CitySearch
             locations={this.state.locations}
             updateEvents={this.updateEvents}
@@ -125,11 +125,11 @@ class App extends Component {
             numberOfEvents={this.state.numberOfEvents}
           />
           <WelcomeScreen
-          showWelcomeScreen={this.state.showWelcomeScreen}
-          getAccessToken={() => {
-            getAccessToken();
-          }}
-        />
+            showWelcomeScreen={this.state.showWelcomeScreen}
+            getAccessToken={() => {
+              getAccessToken();
+            }}
+          />
         </div>
       );
   }
