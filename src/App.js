@@ -16,8 +16,10 @@ class App extends Component {
     showWelcomeScreen: undefined,
   };
 
-  async componentDidMount() {
+  async componentDidMount() { 
     this.mounted = true;
+    if (navigator.onLine && !window.location.href.startsWith('http://localhost')) {
+   
     const accessToken = localStorage.getItem("access_token");
     const isTokenValid = (await checkToken(accessToken)).error ? false : true;
     const searchParams = new URLSearchParams(window.location.search);
@@ -32,6 +34,7 @@ class App extends Component {
       });
     }
   }
+}
 
   componentWillUnmount() {
     this.mounted = false;
