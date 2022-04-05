@@ -78,13 +78,14 @@ class App extends Component {
         this.setState({
           events: locationEvents.slice(0, this.state.numberOfEvents),
           currentLocation: location,
-          numberOfEvents: eventCount,
+          // numberOfEvents: eventCount,
         });
       }
     });
   };
 
   render() {
+    const { events } = this.state;
     if (this.state.showWelcomeScreen === undefined)
       return <div className="App" />; 
     return (
@@ -94,15 +95,19 @@ class App extends Component {
           locations={this.state.locations}
           updateEvents={this.updateEvents}
         />
-        <NumberOfEvents updateNumberOfEvents={this.updateNumberOfEvents} />
+        <NumberOfEvents  numberOfEvents={this.state.numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
         <WelcomeScreen
           showWelcomeScreen={this.state.showWelcomeScreen}
           getAccessToken={() => {
             getAccessToken();
           }}
         />
+
+
+
+        <div className="data-vis-wrapper">
         <h4>Events in each city</h4>
-        <EventGenre events={this.events}/>
+        <EventGenre events={events}/>
         <ResponsiveContainer height={400}>
           <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
             <CartesianGrid />
@@ -117,6 +122,9 @@ class App extends Component {
             <Scatter data={this.getData()} fill="#8884d8" />
           </ScatterChart>
         </ResponsiveContainer>
+        </div>
+
+
         <WelcomeScreen
           showWelcomeScreen={this.state.showWelcomeScreen}
           getAccessToken={() => {
@@ -125,7 +133,7 @@ class App extends Component {
         />
         <EventList
           events={this.state.events}
-          numberOfEvents={this.state.numberOfEvents}
+          
         />
       </div>
     );
