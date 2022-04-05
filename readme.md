@@ -86,7 +86,7 @@ Given user did not open charts User opens chart User should be able to see a cha
 - CSS
 
 ## Screenshots
-![./screenshot.PNG](./screenshot.PNG)
+![screenshot](./src/screenshot.PNG)
 
 
 
