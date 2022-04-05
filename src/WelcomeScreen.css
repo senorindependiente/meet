@@ -4,7 +4,7 @@
   height: 100%;
   top: 0;
   color: #553c7d;
-  
+  z-index: 10;
 }
 
 .WelcomeScreen h1 {
