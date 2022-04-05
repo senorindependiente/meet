@@ -191,6 +191,17 @@ border-top:1px solid #eab711;
     grid-template-columns: 300px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .Eventlist {
+    grid-template-columns: 250px;
+  }
+  .data-vis-wrapper {
+    width: 75%;
+  }
+}
+
+
 button:hover {
   opacity: 0.8;
 }
