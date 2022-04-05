@@ -23,8 +23,9 @@ const EventGenre = ({ events }) => {
   const colors = ["#ff5977", "#5f1536", "#4c4683", "#323957", "#cea9bc"];
   return (
     <ResponsiveContainer height={400}>
-      <PieChart width={400} height={400} >
+      <PieChart  width={400} height={400} >
         <Pie 
+      
           data={data}
           cx={200}
           cy={200}

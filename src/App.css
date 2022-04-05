@@ -329,3 +329,7 @@ button:hover {
     margin: 0 auto;
   }
 }
+
+.pie-chart{
+  margin-left:2rem;
+}

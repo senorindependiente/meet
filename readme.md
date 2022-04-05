@@ -2,22 +2,20 @@
 > Serverless, progressive web application (PWA) with React using a
 > test-driven development (TDD) technique. The application uses the Google
 > Calendar API to fetch upcoming events
-
+> Live demo [https://senorindependiente.github.io/meet/](https://senorindependiente.github.io/meet/).
 
 ## Table of Contents
 * [General Info](#general-information)
 * [BDD ](#BDD)
-* [Technologies Used](#technologies-used)
 * [Features](#features)
-* [Setup](#setup)
-* [Usage](#usage)
-
-
+* [Technologies Used](#technologies-used)
+* [Screenshots](#screenshots)
 
 ## General Information
 
 
-## BDD 
+## (BDD)
+
 FEATURE 1: FILTER EVENTS BY CITY
 
 Scenatio 1:When user has not searched for a city, show upcoming events from all cities.
@@ -74,22 +72,25 @@ Scenario 1: Show a chart with the number of upcoming events in each city.
 Given user did not open charts User opens chart User should be able to see a chart of upcoming events in each city
 
 
-## Technologies Used
-- React 
-
-
 
 ## Features
+● Filter events by city.
+● Show/hide event details.
+● Specify number of events.
+● Use the app when offline.
+● Add an app shortcut to the home screen.
+● View a chart showing the number of upcoming events by city.
+
+## Technologies Used
+- React 
+- CSS
+
+## Screenshots
+![./screenshot.PNG](./screenshot.PNG)
 
 
 
 
 
-## Setup
 
 
-
-## Usage
-
-
-`write-your-code-here`
