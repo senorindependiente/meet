@@ -7,7 +7,7 @@
 
 * {
   background-color: #fdf7ff;
-  color: #020101;
+  color: #553c7d;
   font-family: "Volkhov";
 }
 
@@ -109,11 +109,13 @@ input[type="number"] {
 .Eventlist {
   display: grid;
   gap: 1rem;
-  margin:4rem;
+  margin: 4rem;
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+border-top:1px solid #eab711;
 }
 
 .event {
+  margin-top:4rem;
   padding: 2rem;
   text-align: left;
   border-radius: 4px;
@@ -167,7 +169,7 @@ input[type="number"] {
   position: absolute;
   right: 5px;
   bottom: 5px;
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 4px;
   outline: none;
   cursor: pointer;
@@ -176,7 +178,7 @@ input[type="number"] {
   border: 0;
   font-size: 0.8rem;
   font-weight: 600;
-  text-transform: uppercase;
+
   font-family: "Montserrat";
   box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%),
     0 1px 3px 0 rgb(93 100 148 / 20%);
@@ -184,9 +186,9 @@ input[type="number"] {
   transition: 0.5s;
 }
 
-@media screen and (max-width: 400px) {
-  .event {
-    margin: 2rem 2rem;
+@media screen and (max-width: 600px) {
+  .Eventlist {
+    grid-template-columns: 300px;
   }
 }
 button:hover {
@@ -243,6 +245,8 @@ button:hover {
   text-align: center;
   flex-direction: column;
   justify-content: center;
+  background-color: #553c7d;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .data-vis-wrapper .recharts-responsive-container {
   min-width: 100%;
@@ -250,6 +254,7 @@ button:hover {
 }
 .recharts-surface {
   overflow: visible;
+  background-color: #fff;
 }
 
 .login-button {
