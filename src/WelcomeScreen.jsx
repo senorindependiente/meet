@@ -1,5 +1,6 @@
 import React from "react";
 import "./WelcomeScreen.css";
+import welcome from "./welcome.png"
 
 
 function WelcomeScreen(props) {
@@ -29,13 +30,15 @@ o.svg"
             <b className="btn-text">Sign in with google</b>
           </button>
         </div>
+       <img className="pic" src={welcome} alt="welcome"/>
       </div>
       <a
         href="https://senorindependiente.github.io/meet/privacy.html"
         rel="nofollow noopener"
       >
         Privacy policy
-      </a>
+      </a> 
+      
     </div>
   ) : null;
 }

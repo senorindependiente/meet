@@ -99,15 +99,15 @@ class App extends Component {
           numberOfEvents={this.state.numberOfEvents}
           updateNumberOfEvents={this.updateNumberOfEvents}
         />
-        <WelcomeScreen
+        {/* <WelcomeScreen
           showWelcomeScreen={this.state.showWelcomeScreen}
           getAccessToken={() => {
             getAccessToken();
           }}
-        />
+        /> */}
 
         <div className="data-vis-wrapper">
-          <EventGenre events={events} />
+          <EventGenre events={events}  />
           <ResponsiveContainer height={400}>
             <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
               <CartesianGrid />
@@ -123,14 +123,7 @@ class App extends Component {
             </ScatterChart>
           </ResponsiveContainer>
         </div>
-
-        <WelcomeScreen
-          showWelcomeScreen={this.state.showWelcomeScreen}
-          getAccessToken={() => {
-            getAccessToken();
-          }}
-        />
-        <EventList events={this.state.events} />
+        <EventList className="event-container" events={this.state.events} />
       </div>
     );
   }
