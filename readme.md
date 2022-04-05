@@ -1,20 +1,22 @@
 # Meet App
+
 > Serverless, progressive web application (PWA) with React using a
 > test-driven development (TDD) technique. The application uses the Google
-> Calendar API to fetch upcoming events
+> Calendar API to fetch upcoming events.
+
 > Live demo [https://senorindependiente.github.io/meet/](https://senorindependiente.github.io/meet/).
 
 ## Table of Contents
-* [General Info](#general-information)
-* [BDD ](#BDD)
-* [Features](#features)
-* [Technologies Used](#technologies-used)
-* [Screenshots](#screenshots)
+
+- [General Info](#general-information)
+- [BDD - Behavior Driven Development ](#BDD)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
 
 ## General Information
 
-
-## (BDD)
+## (BDD - Behavior Driven Development)
 
 FEATURE 1: FILTER EVENTS BY CITY
 
@@ -41,7 +43,6 @@ Scenario 2: User can expand an event to see its details.
 Given user did not expand an event element to see more details When user expands an event element User should see more details of an event element
 
 Scenario 3: User can collapse an event to hide its details.
-
 
 Given the user did not collapse an event element User collapses an event element User should see less details of an event element
 
@@ -71,27 +72,21 @@ Scenario 1: Show a chart with the number of upcoming events in each city.
 
 Given user did not open charts User opens chart User should be able to see a chart of upcoming events in each city
 
-
-
 ## Features
-* Filter events by city.
-* Show/hide event details.
-* Specify number of events.
-* Use the app when offline.
-* Add an app shortcut to the home screen.
-* View a chart showing the number of upcoming events by city.
+
+- Filter events by city.
+- Show/hide event details.
+- Specify number of events.
+- Use the app when offline.
+- Add an app shortcut to the home screen.
+- View a chart showing the number of upcoming events by city.
 
 ## Technologies Used
-- React 
+
+- React
 - CSS
 
 ## Screenshots
+
 ![screenshot](./src/screenshot.PNG)
 ![screenshot](./src/screenshot2.PNG)
-
-
-
-
-
-
-
