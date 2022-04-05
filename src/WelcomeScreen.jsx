@@ -1,7 +1,6 @@
 import React from "react";
 import "./WelcomeScreen.css";
-import welcome from "./welcome.png"
-
+import welcome2 from "./welcome2.png";
 
 function WelcomeScreen(props) {
   return props.showWelcomeScreen ? (
@@ -30,15 +29,17 @@ o.svg"
             <b className="btn-text">Sign in with google</b>
           </button>
         </div>
-       <img className="pic" src={welcome} alt="welcome"/>
+        <div className="pic-container">
+          {" "}
+          <img className="pic" src={welcome2} alt="welcome" />
+        </div>
       </div>
       <a
         href="https://senorindependiente.github.io/meet/privacy.html"
         rel="nofollow noopener"
       >
         Privacy policy
-      </a> 
-      
+      </a>
     </div>
   ) : null;
 }
