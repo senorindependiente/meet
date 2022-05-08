@@ -4,7 +4,7 @@
 > test-driven development (TDD) technique. The application uses the Google
 > Calendar API to fetch upcoming events.
 
-> Live demo [https://senorindependiente.github.io/meet/](https://senorindependiente.github.io/meet/).
+> Live demo [_here_](https://senorindependiente.github.io/meet/).
 
 ## Table of Contents
 
